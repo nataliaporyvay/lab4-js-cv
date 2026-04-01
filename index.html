@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CV — Наталія Поривай" />
+    <meta name="author" content="Наталія Поривай" />
+    <title>CV — Наталія Поривай</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="cv" id="cv">
+      <aside class="sidebar">
+        <div class="photo-frame">
+          <img class="photo" src="photo.jpg" alt="Фото: Наталія Поривай" />
+        </div>
+
+        <section class="block">
+          <h2 class="block-title">Про мене</h2>
+          <p class="text">
+            Студентка 2 курсу Львівської політехніки (Кібербезпека). Розвиваюсь
+            у веброзробці, маю досвід створення сайтів та навчальних проєктів.
+          </p>
+        </section>
+
+        <section class="block">
+          <h2 class="block-title">Контакти</h2>
+
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="contact-label">📞</span>
+              <a class="link" href="tel:+380680746035">+380 68 074 6035</a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">✉️</span>
+              <a class="link" href="mailto:nataliaporyvay06@gmail.com"
+                >nataliaporyvay06@gmail.com</a
+              >
+            </li>
+            <li class="contact-item">
+              <span class="contact-label">📍</span>
+              <span class="text">Львів</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2 class="block-title">Додатково</h2>
+          <ul class="list">
+            <li>Англійська — B2</li>
+            <li>Золота медаль у школі</li>
+            <li>Ціль: Full-stack веброзробка</li>
+          </ul>
+        </section>
+      </aside>
+
+      <main class="content">
+        <header class="header">
+          <h1 class="name">Наталія Поривай</h1>
+          <p class="role">Студентка (Кібербезпека) • Web Development</p>
+
+          <div class="theme-panel">
+            <button id="themeToggle" class="theme-button" type="button">
+              Змінити тему
+            </button>
+            <span id="themeStatus" class="theme-status"
+              >Поточна тема: світла</span
+            >
+          </div>
+        </header>
+
+        <section class="section">
+          <h2 class="section-title">Досвід / Проєкти</h2>
+
+          <article class="item">
+            <h3 class="item-title">Проєкти у веброзробці</h3>
+            <p class="item-subtitle">GoIT • навчання Full-stack</p>
+            <ul class="bullets">
+              <li>Верстка та структура сторінок (HTML)</li>
+              <li>Стилізація інтерфейсів (CSS)</li>
+              <li>Практичні навчальні сайти та міні-проєкти</li>
+            </ul>
+          </article>
+
+          <article class="item">
+            <h3 class="item-title">Навчальні роботи</h3>
+            <p class="item-subtitle">Львівська політехніка</p>
+            <ul class="bullets">
+              <li>Python: задачі, скрипти, логіка</li>
+              <li>Бази даних: запити та структури</li>
+              <li>Комп’ютерні мережі: практичні налаштування</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Освіта</h2>
+
+          <div class="item">
+            <h3 class="item-title">НУ “Львівська політехніка”</h3>
+            <p class="item-subtitle">Кібербезпека • 2024 — дотепер</p>
+          </div>
+
+          <div class="item">
+            <h3 class="item-title">Школа</h3>
+            <p class="item-subtitle">Золота медаль</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Навички</h2>
+
+          <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Python</div>
+            <div class="skill">Бази даних</div>
+            <div class="skill">Комп’ютерні мережі</div>
+            <div class="skill">Git/GitHub</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Коментарі попередніх роботодавців</h2>
+          <p class="text comment-description">
+            Натисни кнопку, щоб завантажити коментарі із сервера.
+          </p>
+          <button id="loadCommentsBtn" class="action-button" type="button">
+            Завантажити коментарі
+          </button>
+          <div id="comments" class="comments-box"></div>
+        </section>
+
+        <footer class="footer">
+          <p class="footer-text">© 2026 Наталія Поривай</p>
+
+          <div class="storage-block">
+            <h3 class="storage-title">Інформація з localStorage</h3>
+            <div id="storageInfo"></div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <div class="modal hidden" id="feedbackModal">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModal" type="button">&times;</button>
+        <h2>Форма зворотного зв’язку</h2>
+        <p class="modal-text">
+          Заповни форму, і повідомлення буде надіслано на електронну пошту.
+        </p>
+
+        <form
+          id="feedbackForm"
+          action="https://formspree.io/f/mkopzgdk"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Ім’я" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Номер телефону"
+            required
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Ваше повідомлення"
+            required
+          ></textarea>
+          <button type="submit" class="action-button">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
