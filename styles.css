@@ -9,8 +9,8 @@
     --muted: #6b7280;
     --line: #e5e7eb;
     --sidebar: #f8fafc;
-    --accent: #1e3a8a;
-    --accent-hover: #172d6b;
+    --accent: #ff4d6d;
+    --accent-hover: #e6395f;
 }
 
 body {
@@ -336,8 +336,8 @@ body.dark-theme {
     --muted: #cbd5e1;
     --line: #374151;
     --sidebar: #18212f;
-    --accent: #60a5fa;
-    --accent-hover: #3b82f6;
+    --accent: #ff7aa2;
+    --accent-hover: #ff5c8a;
 }
 
 body.dark-theme .photo-frame {

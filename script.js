@@ -108,7 +108,7 @@ function setupModal() {
 
   setTimeout(() => {
     modal.classList.remove("hidden");
-  }, 2000);
+  }, 60000);
 
   closeModal.addEventListener("click", () => {
     modal.classList.add("hidden");
